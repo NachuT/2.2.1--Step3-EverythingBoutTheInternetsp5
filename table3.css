@@ -1,0 +1,145 @@
+/* gpt helped a lot with color and keyframes, completion used to find the other css styling */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #1a63ff, #4c8bff, #6691ff, #99adff);
+    background-size: 400% 400%;
+    animation: gradientChange 40s ease infinite;
+    color: #000000;
+    overflow-x: hidden;
+}
+
+@keyframes gradientChange {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+header {
+    position: fixed;
+    top: 0;
+    height: 60px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+    z-index: 3;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.definer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 7rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 12.5rem;
+    font-weight: 900;
+    margin-bottom: 15px;
+    background: linear-gradient(90deg, #0e00cc, #333dff);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 4px 4px 8px rgba(12, 10, 10, 0.3);
+    animation: textGradient 2s ease infinite, flashYellow 5s ease-in-out infinite;
+    perspective: 1000px;
+    transform: rotateX(15deg) rotateY(10deg);
+}
+
+@keyframes textGradient {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+@keyframes flashYellow {
+    0%, 100% {
+        color: transparent;
+        text-shadow: 4px 4px 8px rgba(12, 10, 10, 0.3);
+    }
+    50% {
+        color: #ffff00;
+        text-shadow: 4px 4px 20px rgba(255, 255, 0, 0.8);
+    }
+}
+
+section {
+    padding-top: 100px;
+    min-height: 100vh;
+    background: rgba(255, 255, 255, 0.05);
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+#internet h2 {
+    font-size: 5rem;
+    margin-bottom: 20px;
+    color: #0000ff;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#internet p {
+    font-size: 2rem;
+    line-height: 1.6;
+    color: #000000;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.text-box {
+    background: #99b9ff;
+    padding: 25px;
+    flex: 1;
+    text-align: center;
+    font-size: 1.3rem;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #000000;
+}
+
+.text-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+#why-internet h2 {
+    font-size: 5rem;
+    margin-bottom: 20px;
+    color: #0000ff;
+}
+
+#why-internet p {
+    font-size: 2rem;
+    line-height: 1.6;
+    color: #000000;
+    animation: fadeIn 3s ease-in-out;
+}
